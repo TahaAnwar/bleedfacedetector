@@ -10,5 +10,4 @@ import bleedefacedetector as fd
 
 faces_list = fd.haar_detect(img)
 
-weather-reporter -q delhi -d 3
 ```
