@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: bleed-facedetector
+Version: 1.0.0
+Summary: A Python package that lets users use 4 different face detectors
+Home-page: https://github.com/TahaAnwar/bleedfacedetector
+Author: Taha Anwar
+Author-email: taha@bleedai.com
+License: BSD
+Description: # Bleed AI Face Detector
+        
+        A Python package that lets you use 4 different face detectors by just changing a single line of code.
+        
+        ## Usage
+        
+        First import the library then apply your desired method and get the face detections
+        ```
+        import bleedefacedetector as fd
+        
+        faces_list = fd.haar_detect(img)
+        
+        weather-reporter -q delhi -d 3
+        ```
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
