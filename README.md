@@ -117,7 +117,7 @@ import bleedefacetector as fd
 faces_list = fd.cnn_detect(img)
 faces_list = fd.cnn_detect(img, upsample=0, height=350)
 ```
-<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method <i>
+<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method </i>
 
 #### Optional parameters:
 1.  <b> height </b>
