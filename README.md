@@ -71,3 +71,16 @@ like this: <br>
 ## Result when using hog with height=0
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
+
+## detection with Haar Cascades:
+```
+import bleedefacetector as fd
+
+faces_list = fd.haar_detect(img)
+```
+Optional param:
+1.  ** height **
+ By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ 
+ 2. ** saleFactor ** 
+ By default Scalefactor is equal to 1.3, This parameter speicfies how much the size reduces at each image pyramid.A large scale factor will increase the speed of the detector, but wil probr true-positive detection accuracy. Conversely, a smaller scale will slow down the detection process, but increase true-positive detections. However, this smaller scale can also increase the false-positive detection rate as well
