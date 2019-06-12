@@ -2,6 +2,13 @@
 
 A Python package that lets you use 4 different face detectors by just changing a single line of code.
 
+## Installaion
+Note: This library doesn't work on python 3.7 because dlib doesn't easily install on python 3.7
+
+```
+pip install bleedfacedetector   
+```
+
 ## Usage
 
 First import the library then choose one of the 4 provided methods of face detection and then pass in a 8 bit BGR image (Image read by opencv) and get the face detections
