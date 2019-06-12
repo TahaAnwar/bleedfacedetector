@@ -79,7 +79,7 @@ like this: <br>
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
 
-#### For Real time Detection of faces look at [here](https://github.com/TahaAnwar/bleedfacedetector/blob/master/realtimebleedfacetest.py)
+### For Real time Detection of faces look at [here](https://github.com/TahaAnwar/bleedfacedetector/blob/master/realtimebleedfacetest.py)
 
 ## Detection with Haar Cascades:
 ```
