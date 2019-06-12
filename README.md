@@ -137,7 +137,7 @@ faces_list = fd.ssd_detect(img)
 faces_list = fd.ssd_detect(img, conf=0.5,returnconf=False)
 
 ```
-<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method <i>
+<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method </i>
 
 #### Optional parameters:
 1.  <b> conf </b>
