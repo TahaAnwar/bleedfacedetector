@@ -27,7 +27,7 @@ If 3 faces were detected on the example image then you would get back something 
 
 ## Here is the syntax to use all 4 face_detectors
 
-### import bleedefacedetector as fd 
+>> #### import bleedefacedetector as fd 
 * fd.haar_detect(img)  #Haar cascade/ viola jones based detection 
 * fd.hog_detect(img)   #hog (histogram of oriented gradients) based detection 
 * fd.ssd_detect(img)   #SSD + Mobilenet based detection  
@@ -44,7 +44,6 @@ import bleedfacedetector as fd
 import cv2
 
 img = cv2.imread('family.jpg')
-img = cv2.imread('imrankhanface.jpg')
 
 faces = fd.ssd_detect(img)
 
