@@ -8,7 +8,7 @@ cnn_detector = dlib.cnn_face_detection_model_v1('mmod_human_face_detector.dat')
 net = cv2.dnn.readNetFromCaffe("caffeandproto/deploy.prototxt.txt", "caffeandproto/res10_300x300_ssd_iter_140000.caffemodel")
 
 
-def haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=300):
+def haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=350):
     scale=1
     # if the height is 0 then original height will be used
     if height:
@@ -21,7 +21,7 @@ def haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=300):
     return [[int(var * rscale) for var in face] for face in all_faces]
 
 
-def hog_detect(img,upsample=0,height=300):
+def hog_detect(img,upsample=0,height=350):
     if  img.ndim == 3:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
@@ -44,7 +44,7 @@ def hog_detect(img,upsample=0,height=300):
     return all_faces
 
 
-def cnn_detect(img,upsample=0,height=300):
+def cnn_detect(img,upsample=0,height=350):
     if  img.ndim == 3:
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
