@@ -68,6 +68,6 @@ like this: <br>
 * Note you can set custom height by setting height to any number, maybe if you're getting fine results try lowering the height below the defult 350 to get faster speed *
 * Note the height parameter is not for SSD based method *
 
-## Result when uing hog with height=0
+## Result when using hog with height=0
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
