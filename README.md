@@ -55,4 +55,8 @@ cv2.imshow('img',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-So just change fd.ssd_detect(img) with any other method
+So just change fd.ssd_detect(img) with any other method , note when you use any method other than ssd then consider passing height=0 for better accuracy at the cost of increased time
+
+like this:
+```fd.haar_detect(img,height=0)```
+
