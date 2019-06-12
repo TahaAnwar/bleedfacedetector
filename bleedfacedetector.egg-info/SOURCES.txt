@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bleedfacedetector/__init__.py
+bleedfacedetector/deploy.prototxt.txt
+bleedfacedetector/fullapi.py
+bleedfacedetector/haarcascade_frontalface_default.xml
+bleedfacedetector/mmod_human_face_detector.dat
+bleedfacedetector/res10_300x300_ssd_iter_140000.caffemodel
+bleedfacedetector.egg-info/PKG-INFO
+bleedfacedetector.egg-info/SOURCES.txt
+bleedfacedetector.egg-info/dependency_links.txt
+bleedfacedetector.egg-info/requires.txt
+bleedfacedetector.egg-info/top_level.txt

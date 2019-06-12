@@ -1,11 +1,16 @@
 import cv2
 import dlib
 import numpy as np
+from pkg_resources import resource_filename
+mmodlocation = resource_filename(__name__, "mmod_human_face_detector.dat")
+protolocation = resource_filename(__name__, "deploy.prototxt.txt")
+modellocation = resource_filename(__name__, "res10_300x300_ssd_iter_140000.caffemodel")
+haarlocation = resource_filename(__name__, 'haarcascade_frontalface_default.xml')
 
 hog_detctor = dlib.get_frontal_face_detector()
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-cnn_detector = dlib.cnn_face_detection_model_v1('mmod_human_face_detector.dat')
-net = cv2.dnn.readNetFromCaffe("caffeandproto/deploy.prototxt.txt", "caffeandproto/res10_300x300_ssd_iter_140000.caffemodel")
+face_cascade = cv2.CascadeClassifier(haarlocation)
+cnn_detector = dlib.cnn_face_detection_model_v1(mmodlocation)
+net = cv2.dnn.readNetFromCaffe(protolocation, modellocation)
 
 
 def haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=350):

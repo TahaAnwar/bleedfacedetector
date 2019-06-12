@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bleedfacedetector
+Version: 1.0.4.1
+Summary: A Python package that lets users use 4 different face detectors
+Home-page: https://github.com/TahaAnwar/bleedfacedetector
+Author: Taha Anwar
+Author-email: taha@bleedai.com
+License: BSD
+Description: You can find the usage for this library here: "https://github.com/TahaAnwar/bleedfacedetector"
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Description-Content-Type: text/markdown

@@ -1,1 +1,5 @@
 include README.md LICENSE
+include bleedfacedetector/haarcascade_frontalface_default.xml
+include bleedfacedetector/mmod_human_face_detector.dat
+include bleedfacedetector/res10_300x300_ssd_iter_140000.caffemodel
+include bleedfacedetector/deploy.prototxt.txt
