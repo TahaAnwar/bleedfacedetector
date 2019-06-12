@@ -8,7 +8,7 @@ First import the library then choose one of the 4 provided methods of face detec
 
 #### Here you can see how to use haar cascade based face detection
 ```
-import bleedefacedetector as fd
+import bleedefacetector as fd
 
 faces_list = fd.haar_detect(img)
 
@@ -27,7 +27,7 @@ If 3 faces were detected on the example image then you would get back something 
 
 ## Here is the syntax to use all 4 face_detectors
 
->> #### import bleedefacedetector as fd 
+>>  import bleedfacedetector as fd 
 * fd.haar_detect(img)  #Haar cascade/ viola jones based detection 
 * fd.hog_detect(img)   #hog (histogram of oriented gradients) based detection 
 * fd.ssd_detect(img)   #SSD + Mobilenet based detection  
