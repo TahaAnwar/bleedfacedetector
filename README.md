@@ -9,6 +9,7 @@ Note: This library doesn't work on python 3.7 because dlib doesn't easily instal
 pip install bleedfacedetector   
 ```
 <i> To learn about Bleed-AI please visit https://bleedai.com/  </i>
+
 <i> you can always be updated about our open source projects by liking/following our FB page: http://fb.com/bleed-ai
 
 ## Usage
