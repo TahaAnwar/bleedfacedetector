@@ -10,7 +10,7 @@ pip install bleedfacedetector
 ```
 <i> To learn about Bleed-AI please visit https://bleedai.com/  </i>
 
-<i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai
+<i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai  </i>
 
 ## Usage
 
