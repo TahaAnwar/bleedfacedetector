@@ -78,9 +78,15 @@ import bleedefacetector as fd
 
 faces_list = fd.haar_detect(img)
 ```
-Optional param:
-1.  ** height **
+Optional parameters:
+1.  <b> height <b>
+    
  By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
  
- 2. ** saleFactor ** 
- By default Scalefactor is equal to 1.3, This parameter speicfies how much the size reduces at each image pyramid.A large scale factor will increase the speed of the detector, but wil probr true-positive detection accuracy. Conversely, a smaller scale will slow down the detection process, but increase true-positive detections. However, this smaller scale can also increase the false-positive detection rate as well
+ 2. <b> saleFactor <b> 
+    
+ By default Scalefactor is equal to 1.3, This parameter speicfies how much the size reduces at each image pyramid. A large scale factor will increase the speed of the detector, but wil probably harm  true-positive detection accuracy. on the other hand a smaller scale will slow down the detection speed, but will increase true-positive detections. However, this smaller scale will possibly also increase the false-positive detection rate as well
+ 
+ 3. <b> minNeighbors <b>
+
+Defualt value is 5. The minNeighbors parameter controls the minimum number of detected bounding boxes (in this cases 5) in a given area for the region to be classified as a face. This parameter is very helpful in when getting rid of  false-positive detections.
