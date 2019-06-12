@@ -55,7 +55,7 @@ cv2.imshow('img',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![Optional Text](https://github.com/TahaAnwar/bleedfacedetector/tree/master/images/detectedfamily.jpg)
+![Results of SSd detection](https://github.com/TahaAnwar/bleedfacedetector/tree/master/images/detectedfamily.jpg)
 
 
 So just change fd.ssd_detect(img) with any other method , note when you use any method other than ssd then consider passing height=0 for better accuracy at the cost of increased time
