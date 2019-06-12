@@ -22,13 +22,13 @@ If 3 faces were detected on the example image then you would get back something 
 [
 [x1,y1,w1,h1]
 [x2,y2,w2,h2]
-[x3,y3.w3,,h3]
+[x3,y3.w3,h3]
 ]
 
 ## Here is the syntax to use all 4 face_detectors
 
-import bleedefacedetector as fd
-#### fd.haar_detect(img)  # Haar cascade/ viola jones based detection
-#### fd.hog_detect(img)   # hog (histogram of oriented gradients) based detection
-#### fd.ssd_detect(img)   # SSD + Mobilenet based detection
-#### fd.cnn_detect(img)   # CNN based detection  (Only use this in real time when you are running on a GPU)
+** import bleedefacedetector as fd **
+* fd.haar_detect(img)  #Haar cascade/ viola jones based detection 
+* fd.hog_detect(img)   #hog (histogram of oriented gradients) based detection 
+* fd.ssd_detect(img)   #SSD + Mobilenet based detection  
+* fd._detect(img)   #CNN based detection  *(Only use this in real time when you are running on a GPU)* **
