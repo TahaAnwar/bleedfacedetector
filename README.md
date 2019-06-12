@@ -72,21 +72,100 @@ like this: <br>
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
 
-## detection with Haar Cascades:
+## Detection with Haar Cascades:
 ```
 import bleedefacetector as fd
 
 faces_list = fd.haar_detect(img)
+faces_list = fd.haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=350)
 ```
-Optional parameters:
-1.  <b> height <b>
+#### Optional parameters:
+1.  <b> height </b>
     
  By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
  
- 2. <b> saleFactor <b> 
+ 2. <b> saleFactor </b> 
     
  By default Scalefactor is equal to 1.3, This parameter speicfies how much the size reduces at each image pyramid. A large scale factor will increase the speed of the detector, but wil probably harm  true-positive detection accuracy. on the other hand a smaller scale will slow down the detection speed, but will increase true-positive detections. However, this smaller scale will possibly also increase the false-positive detection rate as well
  
- 3. <b> minNeighbors <b>
+ 3. <b> minNeighbors </b>
 
 Defualt value is 5. The minNeighbors parameter controls the minimum number of detected bounding boxes (in this cases 5) in a given area for the region to be classified as a face. This parameter is very helpful in when getting rid of  false-positive detections.
+
+
+## Detection with HOG:
+```
+import bleedefacetector as fd
+
+faces_list = fd.hog_detect(img)
+faces_list = fd.hog_detect(img, upsample=0, height=350)
+```
+#### Optional parameters:
+1.  <b> height </b>
+    
+ By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ 
+ 2. <b>  upsample </b> 
+    
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ 
+ 
+ ## Detection with CNN:
+```
+import bleedefacetector as fd
+
+faces_list = fd.cnn_detect(img)
+faces_list = fd.cnn_detect(img, upsample=0, height=350)
+```
+<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method <i>
+
+#### Optional parameters:
+1.  <b> height </b>
+    
+ By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ 
+ 2. <b>  upsample </b> 
+    
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ 
+ 
+  ## Detection with SSD:
+```
+import bleedefacetector as fd
+
+faces_list = fd.ssd_detect(img)
+faces_list = fd.ssd_detect(img, conf=0.5,returnconf=False)
+
+```
+<i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method <i>
+
+#### Optional parameters:
+1.  <b> conf </b>
+    
+ By defualt its set to  0.5, this is the threshold which determines if a given detection is a face or not , decrease it to get more detections or increase it to prune false positives.
+ 
+ 2. <b>  returnconf </b> 
+    
+ By default upsample its set to False, if you set this parameter to True then instead of getting [x,y,w,h] you will get [x,y,w,h,c] where c is the confidence.
+ 
+### Example code when returnconf is True:
+```
+import bleedfacedetector as fd
+import cv2
+
+img = cv2.imread('images/imrankhanface.jpg')
+
+faces = fd.ssd_detect(img,returnconf=True)
+
+for (x,y,w,h,c) in faces:
+    cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)
+    cv2.putText(img,'Face Detected {:.2f}%'.format(c*100),(x,y+h+15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,0,255), 2, cv2.LINE_AA)
+
+cv2.imshow('img',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+Result:
+![Results of SSd detection with returnconf](images/detecteduturn.jpg)
+
+
