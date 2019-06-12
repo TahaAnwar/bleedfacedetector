@@ -7,7 +7,7 @@ def readme():
 
 
 setup(
-    name="bleed-facedetector",
+    name="bleedfacedetector",
     version="1.0.0",
     description="A Python package that lets users use 4 different face detectors",
     long_description=readme(),
