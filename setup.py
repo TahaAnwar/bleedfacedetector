@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name="bleedfacedetector",
-    version="1.0.4.1",
+    version="1.0.4.2",
     description="A Python package that lets users use 4 different face detectors",
     long_description='You can find the usage for this library here: "https://github.com/TahaAnwar/bleedfacedetector"',
     long_description_content_type="text/markdown",
@@ -23,6 +23,6 @@ setup(
     ],
     packages=["bleedfacedetector"],
     include_package_data=True,
-    install_requires=["dlib==19.8","opencv-python","numpy"],
+    install_requires=["dlib==19.8.1","opencv-python","numpy"],
     
 )
