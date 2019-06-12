@@ -55,3 +55,4 @@ cv2.imshow('img',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+So just change fd.ssd_detect(img) with any other method
