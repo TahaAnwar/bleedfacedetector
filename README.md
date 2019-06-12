@@ -166,6 +166,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 Result:
+
 ![Results of SSd detection with returnconf](images/detecteduturn.jpg)
 
 
