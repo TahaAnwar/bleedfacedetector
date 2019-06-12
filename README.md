@@ -81,6 +81,10 @@ like this: <br>
 ## Result when using hog with height=0
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
+## Face Detection Example on Video
+![Results of SSd real time detection](images/facedet.gif)
+
+
 
 ### For Real time Detection of faces look at [here](https://github.com/TahaAnwar/bleedfacedetector/blob/master/realtimebleedfacetest.py)
 
