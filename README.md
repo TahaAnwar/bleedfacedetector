@@ -58,6 +58,7 @@ cv2.destroyAllWindows()
 ## Results:
 ![Results of SSd detection](images/detectedfamily.jpg)
 
+
 So just change fd.ssd_detect(img) with any other method , note when you use any method other than ssd then consider passing height=0 for better accuracy at the cost of increased time
 
 like this: <br>
@@ -66,4 +67,7 @@ like this: <br>
 * This is because I resize all images to 350 height keeping aspect ratio constant , this is to increase speed but sometimes good detections require a larger height so height = 0 means set height to original. 
 * Note you can set custom height by setting height to any number, maybe if you're getting fine results try lowering the height below the defult 350 to get faster speed *
 * Note the height parameter is not for SSD based method *
+
+## Result when uing hog with height=0
+![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
