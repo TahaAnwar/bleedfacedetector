@@ -41,7 +41,7 @@ If 3 faces were detected on the example image then you would get back something 
 > * fd.haar_detect(img)  #Haar cascade/ viola jones based detection 
 > * fd.hog_detect(img)   #hog (histogram of oriented gradients) based detection 
 > * fd.ssd_detect(img)   #SSD + Mobilenet based detection  
-> * fd._detect(img)   #CNN based detection  *(Only use this in real time when you are running on a GPU)* 
+> * fd.cnn_detect(img)   #CNN based detection  *(Only use this in real time when you are running on a GPU)* 
 
 NO matter which method you use the returned faces are always in the same format [x,y,w,h]
 
