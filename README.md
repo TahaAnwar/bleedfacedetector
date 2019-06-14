@@ -10,7 +10,7 @@ pip install bleedfacedetector
 ```
 <i> To learn about Bleed-AI please visit https://bleedai.com/  </i>
 
-<i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai
+<i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai  </i>
 
 ## Usage
 
@@ -40,8 +40,8 @@ If 3 faces were detected on the example image then you would get back something 
 >>  import bleedfacedetector as fd 
 > * fd.haar_detect(img)  #Haar cascade/ viola jones based detection 
 > * fd.hog_detect(img)   #hog (histogram of oriented gradients) based detection 
-> * fd.ssd_detect(img)   #SSD + Mobilenet based detection  
-> * fd._detect(img)   #CNN based detection  *(Only use this in real time when you are running on a GPU)* 
+> * fd.ssd_detect(img)   #SSD + Resnet10 based detection  
+> * fd.cnn_detect(img)   #CNN based detection  *(Only use this in real time when you are running on a GPU)* 
 
 NO matter which method you use the returned faces are always in the same format [x,y,w,h]
 
@@ -75,11 +75,15 @@ like this: <br>
 ```fd.haar_detect(img,height=0)```
 
 * This is because I resize all images to 350 height keeping aspect ratio constant , this is to increase speed but sometimes good detections require a larger height so height = 0 means set height to original. 
-* Note you can set custom height by setting height to any number, maybe if you're getting fine results try lowering the height below the defult 350 to get faster speed *
-* Note the height parameter is not for SSD based method *
+* Note you can set custom height by setting height to any number, maybe if you're getting fine results try lowering the height below the defult 350 to get faster speed 
+* Note the height parameter is not for SSD based method 
 
 ## Result when using hog with height=0
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
+
+## Face Detection Example on Video
+![Results of SSd real time detection](images/facedet.gif)
+
 
 
 ### For Real time Detection of faces look at [here](https://github.com/TahaAnwar/bleedfacedetector/blob/master/realtimebleedfacetest.py)
