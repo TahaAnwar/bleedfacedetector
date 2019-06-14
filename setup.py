@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name="bleedfacedetector",
-    version="1.0.4.2",
+    version="1.0.4.3",
     description="A Python package that lets users use 4 different face detectors",
     long_description='You can find the usage for this library here: "https://github.com/TahaAnwar/bleedfacedetector"',
     long_description_content_type="text/markdown",
