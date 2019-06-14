@@ -1,5 +1,5 @@
 # Bleed AI Face Detector   
-(version=1.0.4.3)
+Version=1.0.4.3
 
 A Python package that lets you use 4 different face detectors by just changing a single line of code.
 
