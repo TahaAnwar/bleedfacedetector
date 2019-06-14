@@ -69,16 +69,15 @@ cv2.destroyAllWindows()
 ![Results of SSd detection](images/detectedfamily.jpg)
 
 
-So just change fd.ssd_detect(img) with any other method , note when you use any method other than ssd then consider passing height=0 for better accuracy at the cost of increased time
+So just change fd.ssd_detect(img) with any other method , note when you use any method other than ssd then you may consider passing height=400 or any custom height to speed up detection speed at the cost of accuracy.
 
 like this: <br>
-```fd.haar_detect(img,height=0)```
+```fd.haar_detect(img,height=400)```
 
-* This is because I resize all images to 350 height keeping aspect ratio constant , this is to increase speed but sometimes good detections require a larger height so height = 0 means set height to original. 
-* Note you can set custom height by setting height to any number, maybe if you're getting fine results try lowering the height below the defult 350 to get faster speed 
+* This is because then it will resize all images to specified height keeping aspect ratio constant , this will increase speed but sometimes good detections require a larger height so you may leave height alone of pass in a larger height. 
 * Note the height parameter is not for SSD based method 
 
-## Result when using hog with height=0
+## Result when using hog
 ![Results of HOg detection](images/detectedfamilywithhog.jpg)
 
 ## Face Detection Example on Video
@@ -93,12 +92,12 @@ like this: <br>
 import bleedefacetector as fd
 
 faces_list = fd.haar_detect(img)
-faces_list = fd.haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=350)
+faces_list = fd.haar_detect(img,scaleFactor = 1.3, minNeighbors = 5, height=0)
 ```
 #### Optional parameters:
 1.  <b> height </b>
     
- By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ By default height=0 which means use original height, you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. 
  
  2. <b> saleFactor </b> 
     
@@ -114,12 +113,12 @@ Defualt value is 5. The minNeighbors parameter controls the minimum number of de
 import bleedefacetector as fd
 
 faces_list = fd.hog_detect(img)
-faces_list = fd.hog_detect(img, upsample=0, height=350)
+faces_list = fd.hog_detect(img, upsample=0, height=0)
 ```
 #### Optional parameters:
 1.  <b> height </b>
     
- By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ By default height=0 which means use original height, you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. 
  
  2. <b>  upsample </b> 
     
@@ -131,14 +130,14 @@ faces_list = fd.hog_detect(img, upsample=0, height=350)
 import bleedefacetector as fd
 
 faces_list = fd.cnn_detect(img)
-faces_list = fd.cnn_detect(img, upsample=0, height=350)
+faces_list = fd.cnn_detect(img, upsample=0, height=0)
 ```
 <i> Warning! don't run this in real time on a CPU, use a GPU for real time using CNN method </i>
 
 #### Optional parameters:
 1.  <b> height </b>
     
- By default height resizes to 350 , you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. Height=0 means use original height
+ By default height=0 which means use original height, you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. 
  
  2. <b>  upsample </b> 
     
