@@ -13,6 +13,8 @@ pip install bleedfacedetector
 
 <i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai  </i>
 
+<i> For benchmarks, comparasions between all the methods you can read this excellent blog post https://www.learnopencv.com/face-detection-opencv-dlib-and-deep-learning-c-python/   (by Vikas Gupta @ learnopencv)</i>
+
 ## Usage
 
 First import the library then choose one of the 4 provided methods of face detection and then pass in a 8 bit BGR image (Image read by opencv) and get the face detections
