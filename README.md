@@ -21,7 +21,7 @@ First import the library then choose one of the 4 provided methods of face detec
 
 #### Here you can see how to use haar cascade based face detection
 ```
-import bleedefacetector as fd
+import bleedfacetector as fd
 
 faces_list = fd.haar_detect(img)
 
@@ -92,7 +92,7 @@ like this: <br>
 
 ## Detection with Haar Cascades:
 ```
-import bleedefacetector as fd
+import bleedfacetector as fd
 
 faces_list = fd.haar_detect(img)
 faces_list = fd.haar_detect(img,scaleFactor = 1.3, minNeighbors = 5, height=0)
@@ -113,7 +113,7 @@ Defualt value is 5. The minNeighbors parameter controls the minimum number of de
 
 ## Detection with HOG:
 ```
-import bleedefacetector as fd
+import bleedfacetector as fd
 
 faces_list = fd.hog_detect(img)
 faces_list = fd.hog_detect(img, upsample=0, height=0)
@@ -130,7 +130,7 @@ faces_list = fd.hog_detect(img, upsample=0, height=0)
  
  ## Detection with CNN:
 ```
-import bleedefacetector as fd
+import bleedfacetector as fd
 
 faces_list = fd.cnn_detect(img)
 faces_list = fd.cnn_detect(img, upsample=0, height=0)
@@ -149,7 +149,7 @@ faces_list = fd.cnn_detect(img, upsample=0, height=0)
  
   ## Detection with SSD:
 ```
-import bleedefacetector as fd
+import bleedfacetector as fd
 
 faces_list = fd.ssd_detect(img)
 faces_list = fd.ssd_detect(img, conf=0.5,returnconf=False)
