@@ -9,11 +9,13 @@ A Python package that lets you use 4 different face detectors by just changing a
 Note: Make sure you have installed Opencv-python and dlib before installing this library. Otherwise you can use below commands to install dlib.
 
 **Install Opencv**
-```pip install opencv-python
+```
+pip install opencv-python
 ```
 
 **Install dlib**
-```pip install dlib    or  pip install dlib=19.8.1
+```
+pip install dlib    or  pip install dlib=19.8.1
 ```
 
 **Install Bleedfacedetector**
