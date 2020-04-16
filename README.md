@@ -1,7 +1,5 @@
 # Bleed AI Face Detector   
-Version=1.0.5 
-Version=1.0.6
-
+Version=1.0.17
 
 A Python package that lets you use 4 different face detectors by just changing a single line of code.
 
@@ -15,7 +13,9 @@ pip install opencv-python
 
 **Install dlib**
 ```
-pip install dlib    or  pip install dlib=19.8.1
+pip install dlib    
+or
+pip install dlib=19.8.1
 ```
 
 **Install Bleedfacedetector**
