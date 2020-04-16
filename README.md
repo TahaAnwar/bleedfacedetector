@@ -6,17 +6,21 @@ Version=1.0.6
 A Python package that lets you use 4 different face detectors by just changing a single line of code.
 
 ## Installaion
-Note: This library doesn't work on python 3.7 because dlib doesn't easily install on python 3.7 if you're not building from source
+Note: Make sure you have installed Opencv-python and dlib before installing this library. Otherwise you can use below commands to install dlib.
 
-**Windows**
+**Install Opencv**
+```pip install opencv-python
+```
+
+**Install dlib**
+```pip install dlib    or  pip install dlib=19.8.1
+```
+
+**Install Bleedfacedetector**
 ```
 pip install bleedfacedetector   
 ```
 
-**Linux**
-```
-pip install bleedfacedetector==1.0.5   
-```
 <i> To learn about Bleed-AI please visit https://bleedai.com/  </i>
 
 <i> You can always stay updated about my open source projects by liking/following our FB page: http://fb.com/bleed-ai  </i>
