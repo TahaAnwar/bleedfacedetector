@@ -9,8 +9,13 @@ haarlocation = resource_filename(__name__, 'haarcascade_frontalface_default.xml'
 
 hog_detctor = dlib.get_frontal_face_detector()
 face_cascade = cv2.CascadeClassifier(haarlocation)
-cnn_detector = dlib.cnn_face_detection_model_v1(mmodlocation)
 net = cv2.dnn.readNetFromCaffe(protolocation, modellocation)
+
+try:
+    cnn_detector = dlib.cnn_face_detection_model_v1(mmodlocation)
+except:
+   print('Wlll not be able to use cnn_detector as no cuda device was detected')
+
 
 
 def haar_detect(img,scaleFactor = 1.3,minNeighbors = 5,height=0):
