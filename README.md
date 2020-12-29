@@ -15,7 +15,7 @@ pip install opencv-python
 ```
 pip install dlib    
 or
-pip install dlib=19.8.1
+pip install dlib==19.8.1
 ```
 
 **Install Bleedfacedetector**
