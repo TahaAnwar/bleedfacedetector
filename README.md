@@ -116,9 +116,9 @@ faces_list = fd.haar_detect(img,scaleFactor = 1.3, minNeighbors = 5, height=0)
     
  By default height=0 which means use original height, you can decrease or increase height to change the speed of the alogrithim at the compromise of accuracy. 
  
- 2. <b> saleFactor </b> 
+ 2. <b> scaleFactor </b> 
     
- By default Scalefactor is equal to 1.3, This parameter speicfies how much the size reduces at each image pyramid. A large scale factor will increase the speed of the detector, but wil probably harm  true-positive detection accuracy. on the other hand a smaller scale will slow down the detection speed, but will increase true-positive detections. However, this smaller scale will possibly also increase the false-positive detection rate as well
+ By default Scalefactor is equal to 1.3, This parameter specifies how much the size reduces at each image pyramid. A large scale factor will increase the speed of the detector, but wil probably harm  true-positive detection accuracy. on the other hand a smaller scale will slow down the detection speed, but will increase true-positive detections. However, this smaller scale will possibly also increase the false-positive detection rate as well
  
  3. <b> minNeighbors </b>
 
@@ -139,7 +139,7 @@ faces_list = fd.hog_detect(img, upsample=0, height=0)
  
  2. <b>  upsample </b> 
     
- By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in the image are small then you will have to increase its value and it will cost you speed, but accuracy may increase.
  
  
  ## Detection with CNN:
@@ -158,7 +158,7 @@ faces_list = fd.cnn_detect(img, upsample=0, height=0)
  
  2. <b>  upsample </b> 
     
- By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in the image are small then you will have to increase its value and it will cost you speed, but accuracy may increase.
  
  
   ## Detection with SSD:
