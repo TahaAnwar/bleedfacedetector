@@ -139,7 +139,7 @@ faces_list = fd.hog_detect(img, upsample=0, height=0)
  
  2. <b>  upsample </b> 
     
- By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in the image are small then you will have to increase its value and it will cost you speed, but accuracy may increase.
  
  
  ## Detection with CNN:
@@ -158,7 +158,7 @@ faces_list = fd.cnn_detect(img, upsample=0, height=0)
  
  2. <b>  upsample </b> 
     
- By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in image are samll then you will have to increase its value and it will cost you speed, but accuracy may increase.
+ By default upsample is equal to 0, This parameter determines how many pyramids to go up if faces in the image are small then you will have to increase its value and it will cost you speed, but accuracy may increase.
  
  
   ## Detection with SSD:
